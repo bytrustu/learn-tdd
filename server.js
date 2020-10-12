@@ -1,12 +1,15 @@
 const express = require('express');
 
-const PORT = 8080;
+const PORT = 5000;
 const HOST = '0.0.0.0';
 
 const app = express();
-app.get('/', (req, res) => {
-    res.send('Hello world');
-})
+app.use(express.json());
+
+const productRoutes = require('./routes');
+
+app.use('/api/products', productRoutes);
+
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
