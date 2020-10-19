@@ -117,7 +117,7 @@ describe("Product Controller GetById", () => {
         const errorMessage = {message: 'error'};
         const rejectedPromise = Promise.reject(errorMessage);
         productModel.findById.mockReturnValue(rejectedPromise);
-        await p roductController.getProductById(req, res, next);
+        await productController.getProductById(req, res, next);
         expect(next).toHaveBeenCalledWith(errorMessage);
     });
 });
