@@ -2,8 +2,10 @@ const productController = require('../../controller/products');
 const productModel = require('../../models/Product');
 const httpMocks = require('node-mocks-http');
 const newProduct = require('../data/new-product.json');
+const allProduct = require('../data/all-product.json');
 
 productModel.create = jest.fn();
+productModel.find = jest.fn();
 
 let req, res, next;
 beforeEach(() => {
@@ -49,3 +51,36 @@ describe("Product Controller Create", () => {
     });
 
 });
+
+
+describe("Product Controller Get", () => {
+    it("should have a getProducts function", () => {
+        expect(typeof productController.getProducts).toBe("function");
+    })
+
+    it("should call ProductModel.find({})", async () => {
+        await productController.getProducts(req, res, next);
+        expect(productModel.find).toHaveBeenCalledWith({});
+    })
+
+    it("should return 200 response", async () => {
+        await productController.getProducts(req, res, next);
+        expect(res.statusCode).toBe(200);
+        expect(res._isEndCalled).toBeTruthy();
+    });
+
+    it("should return json body in response", async () => {
+       productModel.find.mockReturnValue(allProduct);
+       await productController.getProducts(req, res, next);
+       expect(res._getJSONData()).toStrictEqual(allProduct);
+    });
+
+    it("should handle errors", async () => {
+        const errorMessage = { message: "Error finding product data" };
+        const rejectedPromise = Promise.reject(errorMessage);
+        productModel.find.mockReturnValue(rejectedPromise);
+        await productController.getProducts(req, res, next);
+        expect(next).toHaveBeenCalledWith(errorMessage);
+    })
+
+})

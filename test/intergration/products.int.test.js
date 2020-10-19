@@ -16,6 +16,6 @@ it("should return 500 on POST /api/products", async () => {
         .post('/api/products')
         .send({name: 'phone'});
     expect(response.statusCode).toBe(201);
-    console.log('response.body', response.body);
+    // console.log('response.body', response.body);
     // expect(response.body).toStrictEqual({ message: ''})
 });
