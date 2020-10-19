@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6996cbd-8b60-40dc-8cc6-d64f6940bf8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/intergration/products.int.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/intergration/products.int.test.js" afterDir="false" />
@@ -37,8 +38,8 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.products.int.test.js">
-    <configuration name="GET /api/product/:productId" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.PUT /api/products">
+    <configuration name="PUT /api/products" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -47,11 +48,11 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/test/intergration/products.int.test.js" />
       <test-names>
-        <test-name value="GET /api/product/:productId" />
+        <test-name value="PUT /api/products" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Product Controller GetById.should handle errors" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Product Controller Update.should handle 404 when item doesent exist" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -60,56 +61,55 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/test/unit/products.test.js" />
       <test-names>
-        <test-name value="Product Controller GetById" />
+        <test-name value="Product Controller Update" />
+        <test-name value="should handle 404 when item doesent exist" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Product Controller Update.should handle errors" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/unit/products.test.js" />
+      <test-names>
+        <test-name value="Product Controller Update" />
         <test-name value="should handle errors" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Product Controller GetById.should return 404 item doesnt exist" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/unit/products.test.js" />
-      <test-names>
-        <test-name value="Product Controller GetById" />
-        <test-name value="should return 404 item doesnt exist" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Product Controller GetById.should return json body and response code 200" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/unit/products.test.js" />
-      <test-names>
-        <test-name value="Product Controller GetById" />
-        <test-name value="should return json body and response code 200" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="products.int.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="products.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/test/unit/products.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="should return 404 on PUT /api/products" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/test/intergration/products.int.test.js" />
+      <test-names>
+        <test-name value="should return 404 on PUT /api/products" />
+      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.products.int.test.js" />
-        <item itemvalue="Jest.GET /api/product/:productId" />
-        <item itemvalue="Jest.Product Controller GetById.should handle errors" />
-        <item itemvalue="Jest.Product Controller GetById.should return 404 item doesnt exist" />
-        <item itemvalue="Jest.Product Controller GetById.should return json body and response code 200" />
+        <item itemvalue="Jest.PUT /api/products" />
+        <item itemvalue="Jest.should return 404 on PUT /api/products" />
+        <item itemvalue="Jest.products.test.js" />
+        <item itemvalue="Jest.Product Controller Update.should handle errors" />
+        <item itemvalue="Jest.Product Controller Update.should handle 404 when item doesent exist" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +125,8 @@
       <workItem from="1602959218812" duration="16955000" />
       <workItem from="1603147384156" duration="892000" />
       <workItem from="1603148288250" duration="104000" />
-      <workItem from="1603148402639" duration="356000" />
+      <workItem from="1603148402639" duration="3009000" />
+      <workItem from="1603151594917" duration="35000" />
     </task>
     <servers />
   </component>
@@ -137,74 +138,78 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="360" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1603129042589" />
+    <state x="100" y="123" width="1592" height="897" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603151212710">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="100" y="123" width="1592" height="897" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1603151212710" />
     <state x="473" y="60" key="CommitChangelistDialog2" timestamp="1602960921735">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="473" y="60" key="CommitChangelistDialog2/0.23.1792.1097@0.23.1792.1097" timestamp="1602960921735" />
-    <state width="1750" height="368" key="GridCell.Tab.0.bottom" timestamp="1603148473553">
+    <state width="1750" height="368" key="GridCell.Tab.0.bottom" timestamp="1603151620704">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473553" />
-    <state width="1750" height="368" key="GridCell.Tab.0.center" timestamp="1603148473552">
+    <state width="1750" height="368" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620704" />
+    <state width="1750" height="368" key="GridCell.Tab.0.center" timestamp="1603151620703">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473552" />
-    <state width="1750" height="368" key="GridCell.Tab.0.left" timestamp="1603148473552">
+    <state width="1750" height="368" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620703" />
+    <state width="1750" height="368" key="GridCell.Tab.0.left" timestamp="1603151620702">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473552" />
-    <state width="1750" height="368" key="GridCell.Tab.0.right" timestamp="1603148473553">
+    <state width="1750" height="368" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620702" />
+    <state width="1750" height="368" key="GridCell.Tab.0.right" timestamp="1603151620703">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473553" />
-    <state width="1750" height="368" key="GridCell.Tab.1.bottom" timestamp="1603148473554">
+    <state width="1750" height="368" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620703" />
+    <state width="1750" height="368" key="GridCell.Tab.1.bottom" timestamp="1603151620513">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473554" />
-    <state width="1750" height="368" key="GridCell.Tab.1.center" timestamp="1603148473554">
+    <state width="1750" height="368" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620513" />
+    <state width="1750" height="368" key="GridCell.Tab.1.center" timestamp="1603151620512">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473554" />
-    <state width="1750" height="368" key="GridCell.Tab.1.left" timestamp="1603148473554">
+    <state width="1750" height="368" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620512" />
+    <state width="1750" height="368" key="GridCell.Tab.1.left" timestamp="1603151620512">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473554" />
-    <state width="1750" height="368" key="GridCell.Tab.1.right" timestamp="1603148473554">
+    <state width="1750" height="368" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620512" />
+    <state width="1750" height="368" key="GridCell.Tab.1.right" timestamp="1603151620512">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473554" />
-    <state width="1750" height="368" key="GridCell.Tab.2.bottom" timestamp="1603148473555">
+    <state width="1750" height="368" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620512" />
+    <state width="1750" height="368" key="GridCell.Tab.2.bottom" timestamp="1603151620513">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.2.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473555" />
-    <state width="1750" height="368" key="GridCell.Tab.2.center" timestamp="1603148473555">
+    <state width="1750" height="368" key="GridCell.Tab.2.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620513" />
+    <state width="1750" height="368" key="GridCell.Tab.2.center" timestamp="1603151620513">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.2.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473555" />
-    <state width="1750" height="368" key="GridCell.Tab.2.left" timestamp="1603148473554">
+    <state width="1750" height="368" key="GridCell.Tab.2.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620513" />
+    <state width="1750" height="368" key="GridCell.Tab.2.left" timestamp="1603151620513">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.2.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473554" />
-    <state width="1750" height="368" key="GridCell.Tab.2.right" timestamp="1603148473555">
+    <state width="1750" height="368" key="GridCell.Tab.2.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620513" />
+    <state width="1750" height="368" key="GridCell.Tab.2.right" timestamp="1603151620513">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.2.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473555" />
-    <state width="1750" height="368" key="GridCell.Tab.3.bottom" timestamp="1603148473556">
+    <state width="1750" height="368" key="GridCell.Tab.2.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620513" />
+    <state width="1750" height="368" key="GridCell.Tab.3.bottom" timestamp="1603151620514">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.3.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473556" />
-    <state width="1750" height="368" key="GridCell.Tab.3.center" timestamp="1603148473555">
+    <state width="1750" height="368" key="GridCell.Tab.3.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620514" />
+    <state width="1750" height="368" key="GridCell.Tab.3.center" timestamp="1603151620514">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.3.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473555" />
-    <state width="1750" height="368" key="GridCell.Tab.3.left" timestamp="1603148473555">
+    <state width="1750" height="368" key="GridCell.Tab.3.center/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620514" />
+    <state width="1750" height="368" key="GridCell.Tab.3.left" timestamp="1603151620513">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.3.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473555" />
-    <state width="1750" height="368" key="GridCell.Tab.3.right" timestamp="1603148473556">
+    <state width="1750" height="368" key="GridCell.Tab.3.left/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620513" />
+    <state width="1750" height="368" key="GridCell.Tab.3.right" timestamp="1603151620514">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="368" key="GridCell.Tab.3.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603148473556" />
+    <state width="1750" height="368" key="GridCell.Tab.3.right/0.23.1792.1097@0.23.1792.1097" timestamp="1603151620514" />
     <state x="598" y="310" width="596" height="522" key="find.popup" timestamp="1603126585723">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
@@ -217,5 +222,8 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="561" y="268" width="670" height="676" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1603126574061" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/learn_tdd$products_test_js.info" NAME="products.test.js Coverage Results" MODIFIED="1603150854534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
