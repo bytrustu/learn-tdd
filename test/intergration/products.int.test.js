@@ -19,3 +19,12 @@ it("should return 500 on POST /api/products", async () => {
     // console.log('response.body', response.body);
     // expect(response.body).toStrictEqual({ message: ''})
 });
+
+it("GET /api/products", async () => {
+    const response = await request(app).get('/api/products');
+    response.body = response.body.filter(item => item.name && item.description);
+    expect(response.statusCode).toBe(200);
+    expect(Array.isArray(response.body)).toBeTruthy();
+    expect(response.body[0].name).toBeDefined();
+    expect(response.body[0].description).toBeDefined();
+});
